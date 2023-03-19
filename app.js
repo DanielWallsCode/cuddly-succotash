@@ -3,6 +3,8 @@ import './database.js';
 import votacionesRoutes from "./router/votaciones.js";
 import cors from "cors";
 import path from 'path';
+import * as dotenv from 'dotenv';
+dotenv.config()
 const __dirname = path.resolve();
 
 const app = express();

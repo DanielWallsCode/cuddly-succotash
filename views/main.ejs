@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Votacion</title>
 </head>
 
 <body>
@@ -112,6 +112,11 @@ input[type=submit]:hover {
   opacity: 0.8;
 }
 
+.button{
+  background-color: #04AA6D;
+  color: white;
+}
+
 @media (max-width: 600px) {
     .container2{
         flex-direction: column-reverse;
@@ -190,7 +195,7 @@ input[type=submit]:hover {
             <p>Votos: <span class="votosCapriles"></span></p>
         </div>
     </div>
-    <form action="http://localhost:3000/api" method="post">
+    <form action="https://cuddly-succotash-production.up.railway.app/api" method="post">
         <div class="container">
           <h2>VOTA POR UNA VENEZUELA PROSPERA</h2>
         </div>
@@ -211,6 +216,7 @@ input[type=submit]:hover {
         <div class="container">
           <input type="submit" value="Enviar Voto" style="cursor: pointer;">
         </div>
+        <a class="button" href="https://api.whatsapp.com/send?text=Vota%20por%20una%20Venezuela%20prospera%20en%20https://www.youtube.com/">Compartir por whatsapp</a>
       </form>
     </div>
 
@@ -222,28 +228,28 @@ input[type=submit]:hover {
         let votosJuan = document.querySelector('.votosJuan');
         let votosCapriles = document.querySelector('.votosCapriles');
 
-        fetch('http://localhost:3000/api/maria')
+        fetch('https://cuddly-succotash-production.up.railway.app/api/maria')
             .then(response => response.json())
             .then(data => votosMaria.innerHTML = data)
 
             .catch(err => console.log(err))
 
 
-        fetch('http://localhost:3000/api/benjamin')
+        fetch('https://cuddly-succotash-production.up.railway.app/api/benjamin')
             .then(response => response.json())
             .then(data => votosBenjamin.innerHTML = data)
 
             .catch(err => console.log(err))
 
 
-        fetch('http://localhost:3000/api/guido')
+        fetch('https://cuddly-succotash-production.up.railway.app/api/guido')
             .then(response => response.json())
             .then(data => votosJuan.innerHTML = data)
 
             .catch(err => console.log(err))
 
 
-        fetch('http://localhost:3000/api/capriles')
+        fetch('https://cuddly-succotash-production.up.railway.app/api/capriles')
             .then(response => response.json())
             .then(data => votosCapriles.innerHTML = data)
 
